@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED321D53207E13A700B192DE /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED321D52207E13A700B192DE /* PersonTableViewCell.swift */; };
+		ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED321D54207E26AB00B192DE /* TableViewController.swift */; };
 		ED5EA9DD207CB61A0000CE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9DC207CB61A0000CE9D /* AppDelegate.swift */; };
 		ED5EA9DF207CB61A0000CE9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9DE207CB61A0000CE9D /* ViewController.swift */; };
 		ED5EA9E2207CB61A0000CE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5EA9E0207CB61A0000CE9D /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED321D52207E13A700B192DE /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		ED321D54207E26AB00B192DE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ED5EA9D9207CB61A0000CE9D /* TeamMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5EA9DC207CB61A0000CE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED5EA9DE207CB61A0000CE9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +78,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED321D4E207E011A00B192DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EA9E0207CB61A0000CE9D /* Main.storyboard */,
+				ED5EA9E5207CB61A0000CE9D /* LaunchScreen.storyboard */,
+				ED321D52207E13A700B192DE /* PersonTableViewCell.swift */,
+				ED321D4F207E016500B192DE /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED321D4F207E016500B192DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EA9DE207CB61A0000CE9D /* ViewController.swift */,
+				ED321D54207E26AB00B192DE /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED321D50207E03DB00B192DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED321D51207E03FA00B192DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ED5EA9D0207CB61A0000CE9D = {
 			isa = PBXGroup;
 			children = (
+				ED321D51207E03FA00B192DE /* Model */,
 				ED5EA9DB207CB61A0000CE9D /* TeamMob */,
 				ED5EA9F0207CB61A0000CE9D /* TeamMobTests */,
 				ED5EA9FB207CB61A0000CE9D /* TeamMobUITests */,
@@ -98,11 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				ED5EA9DC207CB61A0000CE9D /* AppDelegate.swift */,
-				ED5EA9DE207CB61A0000CE9D /* ViewController.swift */,
-				ED5EA9E0207CB61A0000CE9D /* Main.storyboard */,
 				ED5EA9E3207CB61A0000CE9D /* Assets.xcassets */,
-				ED5EA9E5207CB61A0000CE9D /* LaunchScreen.storyboard */,
 				ED5EA9E8207CB61A0000CE9D /* Info.plist */,
+				ED321D50207E03DB00B192DE /* ViewModel */,
+				ED321D4E207E011A00B192DE /* View */,
 			);
 			path = TeamMob;
 			sourceTree = "<group>";
@@ -259,8 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED321D53207E13A700B192DE /* PersonTableViewCell.swift in Sources */,
 				ED5EA9DF207CB61A0000CE9D /* ViewController.swift in Sources */,
 				ED5EA9DD207CB61A0000CE9D /* AppDelegate.swift in Sources */,
+				ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
