@@ -26,23 +26,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="CBx-X5-C3W">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="90"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="CBx-X5-C3W">
+                                            <rect key="frame" x="8" y="8" width="100" height="73.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="U0J-11-Y1U"/>
-                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="Uee-AS-srp"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="U0J-11-Y1U"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Uee-AS-srp"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-1h-JUX">
-                                            <rect key="frame" x="138" y="19" width="183" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-1h-JUX">
+                                            <rect key="frame" x="116" y="19" width="205" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Senior Android Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEN-9F-RIo">
-                                            <rect key="frame" x="138" y="48" width="183" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senior Android Developer" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEN-9F-RIo">
+                                            <rect key="frame" x="116" y="48" width="205" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On Bench" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MU9-RF-9HI">
+                                            <rect key="frame" x="116" y="68" width="205" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -50,19 +56,23 @@
                                         <constraint firstAttribute="trailing" secondItem="JEN-9F-RIo" secondAttribute="trailing" constant="54" id="7ZY-hJ-3ol"/>
                                         <constraint firstAttribute="bottom" secondItem="JEN-9F-RIo" secondAttribute="bottom" constant="25.5" id="9jQ-HB-NZo"/>
                                         <constraint firstItem="aCa-1h-JUX" firstAttribute="top" secondItem="FN0-fk-FKh" secondAttribute="top" constant="19" id="9oT-b7-Cwy"/>
-                                        <constraint firstItem="CBx-X5-C3W" firstAttribute="leading" secondItem="FN0-fk-FKh" secondAttribute="leading" id="NiP-kB-J7S"/>
-                                        <constraint firstItem="CBx-X5-C3W" firstAttribute="top" secondItem="FN0-fk-FKh" secondAttribute="top" id="Or6-S9-8RY"/>
+                                        <constraint firstItem="CBx-X5-C3W" firstAttribute="leading" secondItem="FN0-fk-FKh" secondAttribute="leading" constant="8" id="NiP-kB-J7S"/>
+                                        <constraint firstItem="CBx-X5-C3W" firstAttribute="top" secondItem="FN0-fk-FKh" secondAttribute="top" constant="8" id="Or6-S9-8RY"/>
                                         <constraint firstItem="JEN-9F-RIo" firstAttribute="leading" secondItem="CBx-X5-C3W" secondAttribute="trailing" constant="8" id="Rmd-s3-e0U"/>
                                         <constraint firstAttribute="trailing" secondItem="aCa-1h-JUX" secondAttribute="trailing" constant="54" id="UHc-t9-RUE"/>
                                         <constraint firstItem="JEN-9F-RIo" firstAttribute="top" secondItem="aCa-1h-JUX" secondAttribute="bottom" constant="8" id="bdL-YI-mQP"/>
-                                        <constraint firstAttribute="bottom" secondItem="CBx-X5-C3W" secondAttribute="bottom" id="eYh-Pl-2br"/>
+                                        <constraint firstAttribute="bottom" secondItem="CBx-X5-C3W" secondAttribute="bottom" constant="8" id="eYh-Pl-2br"/>
                                         <constraint firstItem="aCa-1h-JUX" firstAttribute="leading" secondItem="CBx-X5-C3W" secondAttribute="trailing" constant="8" id="fz9-76-7N9"/>
+                                        <constraint firstItem="MU9-RF-9HI" firstAttribute="top" secondItem="JEN-9F-RIo" secondAttribute="bottom" constant="4" id="g4f-e5-2iy"/>
+                                        <constraint firstItem="MU9-RF-9HI" firstAttribute="leading" secondItem="CBx-X5-C3W" secondAttribute="trailing" constant="8" id="sxL-qh-7YG"/>
+                                        <constraint firstAttribute="trailing" secondItem="MU9-RF-9HI" secondAttribute="trailing" constant="54" id="ukh-Uk-qcL"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="jobTitleLabel" destination="JEN-9F-RIo" id="sGd-0f-DmC"/>
                                     <outlet property="nameLabel" destination="aCa-1h-JUX" id="g6J-Tj-GDg"/>
                                     <outlet property="profileImageView" destination="CBx-X5-C3W" id="gqw-ua-aX3"/>
+                                    <outlet property="projectLabel" destination="MU9-RF-9HI" id="YlW-TO-d0R"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
