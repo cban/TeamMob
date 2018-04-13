@@ -11,31 +11,14 @@ import Foundation
 class MemberProfileViewModel :NSObject, MemberViewModel {
    
     
-    let member :Member
-    
-    var id: String
-    
-    var name: String
-    
-    var surname: String
-    
-    var client: String
-    
-    var startDate: String
-    
-    var birthday: String
+    var members = [Member]()
+
     
     //MARK:Init
-    init(member:Member)
+    init(members:[Member])
     {
-        self.member = member
-        
-        self.id = member.id
-        self.name = member.name
-        self.surname = member.surname
-        self.client = member.client
-        self.startDate = member.startDate
-        self.birthday = member.birthday
+        self.members = members
+
     }
     
    

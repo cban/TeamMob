@@ -10,10 +10,7 @@ import Foundation
 
 
 protocol MemberViewModel{
-    var id : String { get }
-    var name: String { get }
-    var surname: String { get }
-    var client: String { get }
-    var startDate: String { get }
-    var birthday: String { get }
+    
+    var members :[Member] { get }
+
 }
