@@ -17,12 +17,13 @@ class TableViewController: UITableViewController {
     var memberNumberFive: Member!
     var memberNumberSix: Member!
     var memberNumberSeven: Member!
+    var memberNumberEight: Member!
     var viewModel :MemberProfileViewModel!
     var members : [Member]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeMember()
+        initializeMembers()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,27 +31,30 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-func initializeMember()
+func initializeMembers()
 {
+    let photo1 = UIImage(named:"male")!
+    let photo2 = UIImage(named:"female")!
+    let photo3 = UIImage(named:"profilepic")!
+    let photo4 = UIImage(named:"youngfemale")!
+    let photo5 = UIImage(named:"coolkid")!
+    
+    memberNumberOne = Member(id:"1",photo: photo5, name:"Cleo",surname:"Banda",jobTitle:"Junior Andorid Developer",client:"Head office",startDate:"8 January ",birthday: "1 January" )
+    
+    MemberNumberTwo = Member(id:"2",photo:photo1,name:"Mark",surname:"Arrow",jobTitle:"Lame",client:"Deloitte",startDate:"1 April ",birthday: "5 January" )
+    
+    memberNumberThree = Member(id:"3",photo:photo1,name:"John",surname:"Doe",jobTitle:"Senior IOS Developer",client:"Standard Bank",startDate:"1 April",birthday: "5 February" )
     
     
-    memberNumberOne = Member(id:"1",name:"Cleo",surname:"Banda",jobTitle:"Junior Andorid Developer",client:"Head office",startDate:"8 January ",birthday: "1 January" )
+    memberNumberFour = Member(id:"4",photo:photo2 ,name:"Siphokazi",surname:"Fikeni",jobTitle:"Google Developer Expect",client:"On Bench",startDate:"1 April ",birthday: "17 January" )
     
-     MemberNumberTwo = Member(id:"2",name:"Mark",surname:"Arrow",jobTitle:"Lame",client:"Deloitte",startDate:"1 April ",birthday: "5 January" )
+    memberNumberFive = Member(id:"5",photo:photo3,name:"Kabo",surname:"M",jobTitle:"MEAN Stack Developer",client:"Head Office",startDate:"1 April ",birthday: "8 January" )
+    memberNumberSix = Member(id:"5",photo:photo2, name:"Pabi",surname:"Moloi",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 January" )
+    memberNumberSeven = Member(id:"5",photo:photo1, name:"Sashen",surname:"Pillay",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 January ",birthday: "8 January" )
     
-    memberNumberThree = Member(id:"3",name:"John",surname:"Doe",jobTitle:"Senior IOS Developer",client:"Standard Bank",startDate:"1 April",birthday: "5 February" )
+    memberNumberEight = Member(id:"8",photo:photo4,name:"Rochelle",surname:"JVR",jobTitle:"UI/UX Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 September" )
     
-    
-    memberNumberFour = Member(id:"4",name:"Rebecca",surname:"Franks",jobTitle:"Google Developer Expect",client:"Deloitte",startDate:"1 April ",birthday: "17 January" )
-    
-    memberNumberFive = Member(id:"5",name:"Kabo",surname:"M",jobTitle:"MEAN Stack Developer",client:"Head Office",startDate:"1 April ",birthday: "8 January" )
-    memberNumberSix = Member(id:"5",name:"Pabi",surname:"Moloi",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 January" )
-    memberNumberSeven = Member(id:"5",name:"Sashen",surname:"Pillay",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 January ",birthday: "8 January" )
-    
-    
-    
-    
-    members = [memberNumberOne,MemberNumberTwo,memberNumberThree,memberNumberFour,memberNumberFive,memberNumberSix,memberNumberSeven]
+    members = [memberNumberOne,MemberNumberTwo,memberNumberThree,memberNumberFour,memberNumberFive,memberNumberSix,memberNumberSeven,memberNumberEight]
    
     viewModel = MemberProfileViewModel(members:members)
 }
@@ -81,6 +85,7 @@ func initializeMember()
         cell.nameLabel.text = "\(viewModel.members[indexPath.row].name)  \(viewModel.members[indexPath.row].surname)"
         cell.jobTitleLabel.text = viewModel.members[indexPath.row].jobTitle
         cell.projectLabel.text = viewModel.members[indexPath.row].client
+        cell.profileImageView.image = viewModel.members[indexPath.row].photo
      
            return cell
     }

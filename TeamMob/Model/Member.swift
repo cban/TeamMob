@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 struct Member {
     
     // MARK: Properties
     
     let id: String
+    let photo:UIImage
     let name: String
     let surname: String
     let jobTitle: String
@@ -20,8 +22,9 @@ struct Member {
     let birthday: String
     
     
-    init(id:String,name:String,surname:String,jobTitle:String,client:String,startDate:String,birthday:String){
+    init(id:String,photo:UIImage,name:String,surname:String,jobTitle:String,client:String,startDate:String,birthday:String){
         self.id = id
+        self.photo = photo
         self.name = name
         self.surname = surname
         self.jobTitle=jobTitle
