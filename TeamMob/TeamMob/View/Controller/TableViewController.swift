@@ -39,7 +39,7 @@ func initializeMembers()
     let photo4 = UIImage(named:"youngfemale")!
     let photo5 = UIImage(named:"coolkid")!
     
-    memberNumberOne = Member(id:"1",photo: photo5, name:"Cleo",surname:"Banda",jobTitle:"Junior Andorid Developer",client:"Head office",startDate:"8 January ",birthday: "1 January" )
+    memberNumberOne = Member(id:"1",photo: photo5, name:"Cleo",surname:"Banda",jobTitle:"Junior Android Developer",client:"Head office",startDate:"8 January ",birthday: "1 January" )
     
     MemberNumberTwo = Member(id:"2",photo:photo1,name:"Mark",surname:"Arrow",jobTitle:"Lame",client:"Deloitte",startDate:"1 April ",birthday: "5 January" )
     
