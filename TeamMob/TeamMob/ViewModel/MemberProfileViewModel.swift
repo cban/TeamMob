@@ -20,6 +20,6 @@ class MemberProfileViewModel :NSObject, MemberViewModel {
         self.members = members
 
     }
-    
+
    
 }

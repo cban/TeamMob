@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class TableViewController: UITableViewController {
     
@@ -20,7 +21,7 @@ class TableViewController: UITableViewController {
     var memberNumberEight: Member!
     var viewModel :MemberProfileViewModel!
     var members : [Member]!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeMembers()
@@ -31,6 +32,30 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        super.prepare(for: segue, sender: sender)
+//        switch(segue.identifier ?? ""){
+//        case "ShowDetail":
+            guard let memberProfileViewController = segue.destination as? MemberDetailViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let selectedPersonCell = sender as? PersonTableViewCell else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            
+            guard let indexPath =  tableView.indexPath(for: selectedPersonCell) else {
+                fatalError("The selected cell is not being diplayed by the table")
+            }
+            let selectedPerson = members[indexPath.row]
+            memberProfileViewController.member = selectedPerson
+       
+    }
+
+    
 func initializeMembers()
 {
     let photo1 = UIImage(named:"male")!
@@ -39,20 +64,20 @@ func initializeMembers()
     let photo4 = UIImage(named:"youngfemale")!
     let photo5 = UIImage(named:"coolkid")!
     
-    memberNumberOne = Member(id:"1",photo: photo5, name:"Cleo",surname:"Banda",jobTitle:"Junior Android Developer",client:"Head office",startDate:"8 January ",birthday: "1 January" )
+    memberNumberOne = Member(id:"1",photo: photo5, name:"Cleo",surname:"Banda",jobTitle:"Junior Android Developer",client:"Head office",startDate:"8 January ",birthday: "1 January",telephoneNumber:"083 222 1111")
     
-    MemberNumberTwo = Member(id:"2",photo:photo1,name:"Mark",surname:"Arrow",jobTitle:"Lame",client:"Deloitte",startDate:"1 April ",birthday: "5 January" )
+    MemberNumberTwo = Member(id:"2",photo:photo1,name:"Mark",surname:"Arrow",jobTitle:"Lame",client:"Deloitte",startDate:"1 April ",birthday: "5 January" ,telephoneNumber:"083 222 1111")
     
-    memberNumberThree = Member(id:"3",photo:photo1,name:"John",surname:"Doe",jobTitle:"Senior IOS Developer",client:"Standard Bank",startDate:"1 April",birthday: "5 February" )
+    memberNumberThree = Member(id:"3",photo:photo1,name:"John",surname:"Doe",jobTitle:"Senior IOS Developer",client:"Standard Bank",startDate:"1 April",birthday: "5 February", telephoneNumber:"083 222 1111")
     
     
-    memberNumberFour = Member(id:"4",photo:photo2 ,name:"Siphokazi",surname:"Fikeni",jobTitle:"Google Developer Expect",client:"On Bench",startDate:"1 April ",birthday: "17 January" )
+    memberNumberFour = Member(id:"4",photo:photo2 ,name:"Siphokazi",surname:"Fikeni",jobTitle:"Google Developer Expect",client:"On Bench",startDate:"1 April ",birthday: "17 January",telephoneNumber:"083 222 1111" )
     
-    memberNumberFive = Member(id:"5",photo:photo3,name:"Kabo",surname:"M",jobTitle:"MEAN Stack Developer",client:"Head Office",startDate:"1 April ",birthday: "8 January" )
-    memberNumberSix = Member(id:"5",photo:photo2, name:"Pabi",surname:"Moloi",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 January" )
-    memberNumberSeven = Member(id:"5",photo:photo1, name:"Sashen",surname:"Pillay",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 January ",birthday: "8 January" )
+    memberNumberFive = Member(id:"5",photo:photo3,name:"Kabo",surname:"M",jobTitle:"MEAN Stack Developer",client:"Head Office",startDate:"1 April ",birthday: "8 January",telephoneNumber:"083 222 1111" )
+    memberNumberSix = Member(id:"5",photo:photo2, name:"Pabi",surname:"Moloi",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 January",telephoneNumber:"083 222 1111" )
+    memberNumberSeven = Member(id:"5",photo:photo1, name:"Sashen",surname:"Pillay",jobTitle:"Graduate Intern ",client:"Head Office",startDate:"1 January ",birthday: "8 January",telephoneNumber:"083 222 1111")
     
-    memberNumberEight = Member(id:"8",photo:photo4,name:"Rochelle",surname:"JVR",jobTitle:"UI/UX Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 September" )
+    memberNumberEight = Member(id:"8",photo:photo4,name:"Rochelle",surname:"JVR",jobTitle:"UI/UX Intern ",client:"Head Office",startDate:"1 April ",birthday: "8 September",telephoneNumber:"083 222 1111")
     
     members = [memberNumberOne,MemberNumberTwo,memberNumberThree,memberNumberFour,memberNumberFive,memberNumberSix,memberNumberSeven,memberNumberEight]
    
@@ -89,6 +114,7 @@ func initializeMembers()
      
            return cell
     }
+    
  
     /*
     // Override to support conditional editing of the table view.

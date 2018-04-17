@@ -20,9 +20,10 @@ struct Member {
     let client: String
     let startDate: String
     let birthday: String
+    let telephoneNumber :String
     
     
-    init(id:String,photo:UIImage,name:String,surname:String,jobTitle:String,client:String,startDate:String,birthday:String){
+    init(id:String,photo:UIImage,name:String,surname:String,jobTitle:String,client:String,startDate:String,birthday:String,telephoneNumber:String){
         self.id = id
         self.photo = photo
         self.name = name
@@ -31,6 +32,7 @@ struct Member {
         self.client = client
         self.startDate = startDate
         self.birthday =  birthday
+        self.telephoneNumber = telephoneNumber
         
     }
 }
