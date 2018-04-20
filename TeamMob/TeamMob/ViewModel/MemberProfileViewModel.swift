@@ -6,9 +6,16 @@
 //  Copyright © 2018 dvt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class MemberProfileViewModel :NSObject, MemberViewModel {
+class MemberProfileViewModel : NSObject, MemberViewModel {
+    
+    
+    func cellInstance(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
+      return cell
+    }
+    
    
     
     var members = [Member]()
