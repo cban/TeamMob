@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED321D53207E13A700B192DE /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED321D52207E13A700B192DE /* PersonTableViewCell.swift */; };
+		ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED321D54207E26AB00B192DE /* TableViewController.swift */; };
+		ED3BF699207F727E00AA1790 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BF698207F727E00AA1790 /* Member.swift */; };
+		ED3BF69B207F8AB600AA1790 /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BF69A207F8AB600AA1790 /* MemberViewModel.swift */; };
 		ED5EA9DD207CB61A0000CE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9DC207CB61A0000CE9D /* AppDelegate.swift */; };
-		ED5EA9DF207CB61A0000CE9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9DE207CB61A0000CE9D /* ViewController.swift */; };
+		ED5EA9DF207CB61A0000CE9D /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9DE207CB61A0000CE9D /* MemberDetailViewController.swift */; };
 		ED5EA9E2207CB61A0000CE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5EA9E0207CB61A0000CE9D /* Main.storyboard */; };
 		ED5EA9E4207CB61A0000CE9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5EA9E3207CB61A0000CE9D /* Assets.xcassets */; };
 		ED5EA9E7207CB61A0000CE9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5EA9E5207CB61A0000CE9D /* LaunchScreen.storyboard */; };
 		ED5EA9F2207CB61A0000CE9D /* TeamMobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9F1207CB61A0000CE9D /* TeamMobTests.swift */; };
 		ED5EA9FD207CB61A0000CE9D /* TeamMobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9FC207CB61A0000CE9D /* TeamMobUITests.swift */; };
+		ED9CD8E4208082C400A0D829 /* MemberProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED321D52207E13A700B192DE /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		ED321D54207E26AB00B192DE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ED3BF698207F727E00AA1790 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		ED3BF69A207F8AB600AA1790 /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
 		ED5EA9D9207CB61A0000CE9D /* TeamMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5EA9DC207CB61A0000CE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED5EA9DE207CB61A0000CE9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED5EA9DE207CB61A0000CE9D /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
 		ED5EA9E1207CB61A0000CE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED5EA9E3207CB61A0000CE9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5EA9E6207CB61A0000CE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,7 @@
 		ED5EA9F8207CB61A0000CE9D /* TeamMobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamMobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5EA9FC207CB61A0000CE9D /* TeamMobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMobUITests.swift; sourceTree = "<group>"; };
 		ED5EA9FE207CB61A0000CE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +84,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED321D4E207E011A00B192DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EA9E0207CB61A0000CE9D /* Main.storyboard */,
+				ED5EA9E5207CB61A0000CE9D /* LaunchScreen.storyboard */,
+				ED321D52207E13A700B192DE /* PersonTableViewCell.swift */,
+				ED321D4F207E016500B192DE /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED321D4F207E016500B192DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EA9DE207CB61A0000CE9D /* MemberDetailViewController.swift */,
+				ED321D54207E26AB00B192DE /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED321D50207E03DB00B192DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED3BF69A207F8AB600AA1790 /* MemberViewModel.swift */,
+				ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED321D51207E03FA00B192DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED3BF698207F727E00AA1790 /* Member.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ED5EA9D0207CB61A0000CE9D = {
 			isa = PBXGroup;
 			children = (
+				ED321D51207E03FA00B192DE /* Model */,
 				ED5EA9DB207CB61A0000CE9D /* TeamMob */,
 				ED5EA9F0207CB61A0000CE9D /* TeamMobTests */,
 				ED5EA9FB207CB61A0000CE9D /* TeamMobUITests */,
@@ -98,11 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				ED5EA9DC207CB61A0000CE9D /* AppDelegate.swift */,
-				ED5EA9DE207CB61A0000CE9D /* ViewController.swift */,
-				ED5EA9E0207CB61A0000CE9D /* Main.storyboard */,
 				ED5EA9E3207CB61A0000CE9D /* Assets.xcassets */,
-				ED5EA9E5207CB61A0000CE9D /* LaunchScreen.storyboard */,
 				ED5EA9E8207CB61A0000CE9D /* Info.plist */,
+				ED321D50207E03DB00B192DE /* ViewModel */,
+				ED321D4E207E011A00B192DE /* View */,
 			);
 			path = TeamMob;
 			sourceTree = "<group>";
@@ -259,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED5EA9DF207CB61A0000CE9D /* ViewController.swift in Sources */,
+				ED321D53207E13A700B192DE /* PersonTableViewCell.swift in Sources */,
+				ED5EA9DF207CB61A0000CE9D /* MemberDetailViewController.swift in Sources */,
+				ED3BF69B207F8AB600AA1790 /* MemberViewModel.swift in Sources */,
 				ED5EA9DD207CB61A0000CE9D /* AppDelegate.swift in Sources */,
+				ED9CD8E4208082C400A0D829 /* MemberProfileViewModel.swift in Sources */,
+				ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */,
+				ED3BF699207F727E00AA1790 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9RKK7Y365;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = TeamMob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.TeamMob;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.TeamMobility;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -442,10 +494,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9RKK7Y365;
+				DEVELOPMENT_TEAM = GLK7J5PP82;
 				INFOPLIST_FILE = TeamMob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.TeamMob;
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.TeamMobility;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
