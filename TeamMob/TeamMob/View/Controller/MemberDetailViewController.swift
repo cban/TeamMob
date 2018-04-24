@@ -18,24 +18,23 @@ class MemberDetailViewController: UIViewController {
     @IBOutlet weak var birthday: UILabel!
     @IBOutlet weak var startDate: UILabel!
     var member: Member?
+    var memberDetailViewModel: MemberDetailViewModel?
     
      override func viewDidLoad() {
      super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//
-      name.text =  member?.name
-      client.text = member?.client
-      jobTitle.text = member?.jobTitle
-      number.text = member?.telephoneNumber
-      birthday.text = member?.birthday
-      startDate.text = member?.startDate
+
+      name.text = "Full name: "+(member?.name)!+" "+(member?.surname)!
+      client.text = "Client: "+(member?.client)!
+      jobTitle.text = "Job Title: "+(member?.jobTitle)!
+      number.text = "Telephone: "+(member?.telephoneNumber)!
+      birthday.text = "Birthday: "+(member?.birthday)!
+      startDate.text = "Start Date: "+(member?.startDate)!
       profilePhoto.image = member?.photo
-//
     }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
 
 }

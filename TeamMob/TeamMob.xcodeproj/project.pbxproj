@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2F6CBF208DC44400364F95 /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2F6CBE208DC44400364F95 /* MemberRepository.swift */; };
 		ED321D53207E13A700B192DE /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED321D52207E13A700B192DE /* PersonTableViewCell.swift */; };
 		ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED321D54207E26AB00B192DE /* TableViewController.swift */; };
 		ED3BF699207F727E00AA1790 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BF698207F727E00AA1790 /* Member.swift */; };
@@ -18,6 +19,7 @@
 		ED5EA9E7207CB61A0000CE9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5EA9E5207CB61A0000CE9D /* LaunchScreen.storyboard */; };
 		ED5EA9F2207CB61A0000CE9D /* TeamMobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9F1207CB61A0000CE9D /* TeamMobTests.swift */; };
 		ED5EA9FD207CB61A0000CE9D /* TeamMobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9FC207CB61A0000CE9D /* TeamMobUITests.swift */; };
+		ED97652F208EFDCC00C3CBE9 /* MemberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97652E208EFDCC00C3CBE9 /* MemberDetailViewModel.swift */; };
 		ED9CD8E4208082C400A0D829 /* MemberProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED2F6CBE208DC44400364F95 /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
 		ED321D52207E13A700B192DE /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		ED321D54207E26AB00B192DE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		ED3BF698207F727E00AA1790 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		ED5EA9F8207CB61A0000CE9D /* TeamMobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamMobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5EA9FC207CB61A0000CE9D /* TeamMobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMobUITests.swift; sourceTree = "<group>"; };
 		ED5EA9FE207CB61A0000CE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED97652E208EFDCC00C3CBE9 /* MemberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewModel.swift; sourceTree = "<group>"; };
 		ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,7 @@
 			children = (
 				ED3BF69A207F8AB600AA1790 /* MemberViewModel.swift */,
 				ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */,
+				ED97652E208EFDCC00C3CBE9 /* MemberDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				ED3BF698207F727E00AA1790 /* Member.swift */,
+				ED2F6CBE208DC44400364F95 /* MemberRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED321D53207E13A700B192DE /* PersonTableViewCell.swift in Sources */,
+				ED2F6CBF208DC44400364F95 /* MemberRepository.swift in Sources */,
 				ED5EA9DF207CB61A0000CE9D /* MemberDetailViewController.swift in Sources */,
 				ED3BF69B207F8AB600AA1790 /* MemberViewModel.swift in Sources */,
 				ED5EA9DD207CB61A0000CE9D /* AppDelegate.swift in Sources */,
+				ED97652F208EFDCC00C3CBE9 /* MemberDetailViewModel.swift in Sources */,
 				ED9CD8E4208082C400A0D829 /* MemberProfileViewModel.swift in Sources */,
 				ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */,
 				ED3BF699207F727E00AA1790 /* Member.swift in Sources */,

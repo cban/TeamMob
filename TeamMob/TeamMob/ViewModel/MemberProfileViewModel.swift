@@ -9,24 +9,12 @@
 import UIKit
 
 class MemberProfileViewModel : NSObject, MemberViewModel {
-    
-    
-    func cellInstance(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
-      return cell
+
+    var members: [Member]
+    let memberRepo = MemberRepository()
+ 
+    override init()
+   {
+     members = memberRepo.getMembers()
     }
-    
-   
-    
-    var members = [Member]()
-
-    
-    //MARK:Init
-    init(members:[Member])
-    {
-        self.members = members
-
-    }
-
-   
 }

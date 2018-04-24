@@ -12,10 +12,6 @@ import UIKit
 protocol MemberViewModel{
     
     var members :[Member] { get }
-    func cellInstance(_ tableView:UITableView,indexPath:  IndexPath) -> UITableViewCell
-    
-  //  func getCellViewModel( at indexPath:IndexPath) -> MemberProfileViewModel
-    
-    
 
 }
+
