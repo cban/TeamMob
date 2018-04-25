@@ -14,6 +14,7 @@ class MemberDetailViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var client: UILabel!
     @IBOutlet weak var jobTitle: UILabel!
+    @IBOutlet weak var seniority: UILabel!
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var birthday: UILabel!
     @IBOutlet weak var startDate: UILabel!
@@ -25,7 +26,10 @@ class MemberDetailViewController: UIViewController {
 
       name.text = "Full name: "+(member?.name)!+" "+(member?.surname)!
       client.text = "Client: "+(member?.client)!
-      jobTitle.text = "Job Title: "+(member?.jobTitle)!
+      jobTitle.text = "Role: "+(member?.role)!
+      
+        
+        seniority.text = "Seniority: "+(member?.seniority)!
       number.text = "Telephone: "+(member?.telephoneNumber)!
       birthday.text = "Birthday: "+(member?.birthday)!
       startDate.text = "Start Date: "+(member?.startDate)!

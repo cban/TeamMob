@@ -20,6 +20,7 @@
 		ED5EA9F2207CB61A0000CE9D /* TeamMobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9F1207CB61A0000CE9D /* TeamMobTests.swift */; };
 		ED5EA9FD207CB61A0000CE9D /* TeamMobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EA9FC207CB61A0000CE9D /* TeamMobUITests.swift */; };
 		ED97652F208EFDCC00C3CBE9 /* MemberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97652E208EFDCC00C3CBE9 /* MemberDetailViewModel.swift */; };
+		ED976531208F5F0D00C3CBE9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED976530208F5F0D00C3CBE9 /* UIColor.swift */; };
 		ED9CD8E4208082C400A0D829 /* MemberProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		ED5EA9FC207CB61A0000CE9D /* TeamMobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMobUITests.swift; sourceTree = "<group>"; };
 		ED5EA9FE207CB61A0000CE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED97652E208EFDCC00C3CBE9 /* MemberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewModel.swift; sourceTree = "<group>"; };
+		ED976530208F5F0D00C3CBE9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		ED9CD8E3208082C400A0D829 /* MemberProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		ED5EA9D0207CB61A0000CE9D = {
 			isa = PBXGroup;
 			children = (
+				ED976532208F5F1C00C3CBE9 /* Extensions */,
 				ED321D51207E03FA00B192DE /* Model */,
 				ED5EA9DB207CB61A0000CE9D /* TeamMob */,
 				ED5EA9F0207CB61A0000CE9D /* TeamMobTests */,
@@ -176,6 +179,14 @@
 				ED5EA9FE207CB61A0000CE9D /* Info.plist */,
 			);
 			path = TeamMobUITests;
+			sourceTree = "<group>";
+		};
+		ED976532208F5F1C00C3CBE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED976530208F5F0D00C3CBE9 /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				ED9CD8E4208082C400A0D829 /* MemberProfileViewModel.swift in Sources */,
 				ED321D55207E26AB00B192DE /* TableViewController.swift in Sources */,
 				ED3BF699207F727E00AA1790 /* Member.swift in Sources */,
+				ED976531208F5F0D00C3CBE9 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
