@@ -69,7 +69,7 @@ extension TableViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
         
         cell.nameLabel.text = "\(memberProfileViewModel.members[indexPath.row].name)  \(memberProfileViewModel.members[indexPath.row].surname)"
-        cell.jobTitleLabel.text = memberProfileViewModel.members[indexPath.row].role
+        cell.jobTitleLabel.text = memberProfileViewModel.members[indexPath.row].role.rawValue
         cell.projectLabel.text = memberProfileViewModel.members[indexPath.row].client
         cell.profileImageView.image = memberProfileViewModel.members[indexPath.row].photo
         return cell

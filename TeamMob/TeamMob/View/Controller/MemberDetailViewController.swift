@@ -18,22 +18,45 @@ class MemberDetailViewController: UIViewController {
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var birthday: UILabel!
     @IBOutlet weak var startDate: UILabel!
+    @IBOutlet weak var platformLogo: UIImageView!
     var member: Member?
     var memberDetailViewModel: MemberDetailViewModel?
     
+    enum Role:String {
+        case Android = "Android Developer",IOS = "IOS Developer",Mean = "MEAN Stack Developer",Xamarin = " Xamarin Developer", UIUX = "UI/UX Designer" ,Google = "Google Developer Expert"
+    }
      override func viewDidLoad() {
      super.viewDidLoad()
 
       name.text = "Full name: "+(member?.name)!+" "+(member?.surname)!
       client.text = "Client: "+(member?.client)!
-      jobTitle.text = "Role: "+(member?.role)!
-      
-        
-        seniority.text = "Seniority: "+(member?.seniority)!
+      jobTitle.text = "Role: "+(member?.role.rawValue)!
+      seniority.text = "Seniority: "+(member?.seniority)!
       number.text = "Telephone: "+(member?.telephoneNumber)!
       birthday.text = "Birthday: "+(member?.birthday)!
       startDate.text = "Start Date: "+(member?.startDate)!
       profilePhoto.image = member?.photo
+      selectLogo(platform: (member?.role.rawValue)!)
+    }
+    
+    func selectLogo(platform : String){
+        switch platform
+        {
+        case Role.Android.rawValue :
+        platformLogo.image = UIImage(named:"android")!
+        case Role.IOS.rawValue :
+              platformLogo.image = UIImage(named:"apple")!
+        case Role.Mean.rawValue :
+            platformLogo.image = UIImage(named:"mean")!
+        case Role.Xamarin.rawValue :
+            platformLogo.image = UIImage(named:"xamarin")!
+        case Role.UIUX.rawValue :
+            platformLogo.image = UIImage(named:"uiux")!
+            
+        default:
+                platformLogo.image = UIImage(named:"android")!
+        }
+
     }
    
     override func didReceiveMemoryWarning() {
