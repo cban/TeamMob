@@ -13,6 +13,9 @@ extension UIColor {
     // Setup custom colours we can use throughout the app using hex values
     static let seemuBlue = UIColor(hex: 0x00adf7)
     static let teamBlue = UIColor(hex: 0x0291d2)
+    static let androidGreen = UIColor(hex:0xA4C639)
+    static let iosBlue = UIColor(hex: 0x5fc9f8)
+    static let meanYellow = UIColor(hex:0xfd9426)
     static let transparentBlack = UIColor(hex: 0x000000, a: 0.5)
     
     // Create a UIColor from RGB

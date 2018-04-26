@@ -17,6 +17,10 @@ class TableViewController :UIViewController,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         memberProfileViewModel = MemberProfileViewModel()
+        let textField = UITextField()
+        textField.textColor = UIColor.white
+        textField.text = "Members : \(memberProfileViewModel.members.count)"
+        self.navigationItem.titleView = textField
         setTableView()
     }
    
@@ -67,11 +71,12 @@ extension TableViewController : UITableViewDataSource {
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell", for: indexPath) as! PersonTableViewCell
-        
+        cell.switchLabelColor(platform: memberProfileViewModel.members[indexPath.row].role.rawValue)
         cell.nameLabel.text = "\(memberProfileViewModel.members[indexPath.row].name)  \(memberProfileViewModel.members[indexPath.row].surname)"
         cell.jobTitleLabel.text = memberProfileViewModel.members[indexPath.row].role.rawValue
         cell.projectLabel.text = memberProfileViewModel.members[indexPath.row].client
         cell.profileImageView.image = memberProfileViewModel.members[indexPath.row].photo
         return cell
     }
-}
+
+    }

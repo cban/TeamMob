@@ -36,7 +36,27 @@ class MemberDetailViewController: UIViewController {
       birthday.text = "Birthday: "+(member?.birthday)!
       startDate.text = "Start Date: "+(member?.startDate)!
       profilePhoto.image = member?.photo
+      switchLabelColor(platform: (member?.role.rawValue)!)
       selectLogo(platform: (member?.role.rawValue)!)
+    }
+   
+    
+    func switchLabelColor (platform : String){
+        switch platform
+        {
+        case Role.Android.rawValue :
+          jobTitle.textColor = UIColor.androidGreen
+        case Role.Mean.rawValue :
+          jobTitle.textColor = UIColor.red
+        case Role.IOS.rawValue :
+            jobTitle.textColor = UIColor.iosBlue
+        case Role.Xamarin.rawValue :
+           jobTitle.textColor = UIColor.teamBlue
+        case Role.UIUX.rawValue :
+          jobTitle.textColor = UIColor.red
+        default:
+          jobTitle.textColor = UIColor.darkGray
+        }
     }
     
     func selectLogo(platform : String){
